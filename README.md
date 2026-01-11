@@ -12,7 +12,7 @@
 ╚══════╝╚══════╝ ╚═════╝
 ```
 
-**Leo** is a multi-agent blog writing system. One command researches your topic, analyzes competitors, writes SEO-optimized content, generates images, and publishes to your CMS.
+**Leo** is a terminal bases content agent. One command researches your topic, analyzes competitors, writes SEO-optimized content, generates images, and publishes to your CMS.
 
 ```bash
 npm install -g @anthropic/leo
