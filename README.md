@@ -1,20 +1,146 @@
-# Leo
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/BlockchainHB/leo-cli/main/.github/leo-banner-dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/BlockchainHB/leo-cli/main/.github/leo-banner-light.svg">
+    <img alt="Leo" src="https://raw.githubusercontent.com/BlockchainHB/leo-cli/main/.github/leo-banner-dark.svg" width="600">
+  </picture>
+</p>
 
-> AI-powered blog writing agent that creates SEO-optimized content with Claude
+<pre align="center">
+<b>
+██╗     ███████╗ ██████╗
+██║     ██╔════╝██╔═══██╗
+██║     █████╗  ██║   ██║
+██║     ██╔══╝  ██║   ██║
+███████╗███████╗╚██████╔╝
+╚══════╝╚══════╝ ╚═════╝
+</b>
+<i>AI-Powered Blog Writing Agent</i>
+</pre>
 
-[![npm version](https://img.shields.io/npm/v/@anthropic/leo.svg)](https://www.npmjs.com/package/@anthropic/leo)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <a href="https://www.npmjs.com/package/@anthropic/leo"><img src="https://img.shields.io/npm/v/@anthropic/leo.svg" alt="npm version"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+  <a href="https://github.com/BlockchainHB/leo-cli/stargazers"><img src="https://img.shields.io/github/stars/BlockchainHB/leo-cli" alt="GitHub stars"></a>
+</p>
 
-Leo handles the entire content creation pipeline: keyword research, competitor analysis, content writing, image generation, and CMS publishing. Built with Claude and designed for developers who want to automate their blog content workflow.
+<p align="center">
+  <b>Create SEO-optimized blog content with Claude</b><br>
+  <sub>Research → Analyze → Write → Publish — All automated</sub>
+</p>
 
-## Why Use Leo?
+---
 
-- **Automated Research** - Analyzes top-ranking competitors and current web data
-- **SEO-Optimized** - Generates content structured for search rankings
-- **Multi-Agent Architecture** - Specialized agents for research, writing, and images
-- **Flexible Publishing** - Sanity CMS or local markdown files
-- **Configurable Style** - Customize voice, tone, and visual design
-- **Local-First** - Works entirely on your machine with your API keys
+## How It Works
+
+```
+                                    ┌─────────────────────────────────────┐
+                                    │                                     │
+                                    │      📝  YOUR BLOG POST             │
+                                    │                                     │
+                                    │   SEO-optimized, well-researched,   │
+                                    │   ready to publish                  │
+                                    │                                     │
+                                    └──────────────────▲──────────────────┘
+                                                       │
+                           ┌───────────────────────────┴───────────────────────────┐
+                           │                                                       │
+                           │                   🦁  LEO                             │
+                           │              AI Orchestrator                          │
+                           │                                                       │
+                           │   Coordinates specialized agents to research,         │
+                           │   analyze, write, and create images                   │
+                           │                                                       │
+                           └───┬───────────┬───────────┬───────────┬───────────┬───┘
+                               │           │           │           │           │
+              ┌────────────────┴──┐  ┌─────┴─────┐  ┌──┴──────┐  ┌─┴─────────┐  ┌┴────────────┐
+              │                   │  │           │  │         │  │           │  │             │
+              │  🔍 SERP          │  │ 🌐 Web    │  │ 📊 Page │  │ ✍️  Content │  │ 🎨 Image    │
+              │  Researcher       │  │ Researcher│  │ Scraper │  │ Writer    │  │ Creator     │
+              │                   │  │           │  │         │  │           │  │             │
+              │  DataForSEO       │  │ Perplexity│  │Firecrawl│  │ Claude    │  │ OpenRouter  │
+              │                   │  │           │  │         │  │ Opus      │  │             │
+              └───────────────────┘  └───────────┘  └─────────┘  └───────────┘  └─────────────┘
+```
+
+## The Pipeline
+
+```
+┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+│              │    │              │    │              │    │              │    │              │
+│  1. KEYWORD  │───▶│  2. RESEARCH │───▶│  3. ANALYZE  │───▶│  4. WRITE    │───▶│  5. PUBLISH  │
+│              │    │              │    │              │    │              │    │              │
+│  Enter your  │    │  Gather SERP │    │  Study top   │    │  Generate    │    │  Save to     │
+│  target      │    │  data, scrape│    │  competitors │    │  SEO-ready   │    │  CMS or      │
+│  keyword     │    │  competitors │    │  find gaps   │    │  article     │    │  markdown    │
+│              │    │              │    │              │    │              │    │              │
+└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
+       │                   │                   │                   │                   │
+       ▼                   ▼                   ▼                   ▼                   ▼
+   "best seo        Ranks, URLs,         Content gaps,        2000+ word         ./drafts/ or
+    tips 2025"      titles, meta         opportunities        article with       Sanity CMS
+                                                              images
+```
+
+## Features
+
+```
+╭──────────────────────────────────────────────────────────────────────────────╮
+│                                                                              │
+│  ⚡ AUTOMATED RESEARCH        │  📈 SEO-OPTIMIZED           │  🤖 MULTI-AGENT │
+│  ─────────────────────        │  ──────────────             │  ────────────── │
+│  Analyzes top-ranking         │  Content structured         │  Specialized    │
+│  competitors and current      │  for search rankings        │  agents for     │
+│  web data automatically       │  with proper headings       │  each task      │
+│                               │                             │                 │
+├───────────────────────────────┼─────────────────────────────┼─────────────────┤
+│                               │                             │                 │
+│  📤 FLEXIBLE PUBLISHING       │  🎨 CONFIGURABLE STYLE      │  🏠 LOCAL-FIRST │
+│  ───────────────────          │  ─────────────────          │  ──────────────  │
+│  Sanity CMS or local          │  Customize voice, tone,     │  Works entirely │
+│  markdown files               │  and visual design          │  on your machine│
+│                               │                             │                 │
+╰──────────────────────────────────────────────────────────────────────────────╯
+```
+
+## Quick Start
+
+```bash
+# Install Leo globally
+npm install -g @anthropic/leo
+
+# Run the setup wizard
+leo
+
+# Write your first article
+leo write "how to start a blog in 2025"
+```
+
+```
+┌────────────────────────────────────────────────────────────┐
+│                                                            │
+│  $ leo                                                     │
+│                                                            │
+│  ╭─ Leo Setup ─────────────────────────────────────────╮   │
+│  │                                                     │   │
+│  │              ██╗     ███████╗ ██████╗               │   │
+│  │              ██║     ██╔════╝██╔═══██╗              │   │
+│  │              ██║     █████╗  ██║   ██║              │   │
+│  │              ██║     ██╔══╝  ██║   ██║              │   │
+│  │              ███████╗███████╗╚██████╔╝              │   │
+│  │              ╚══════╝╚══════╝ ╚═════╝               │   │
+│  │                                                     │   │
+│  │           AI Blog Writing Agent                     │   │
+│  │                                                     │   │
+│  │      Quick setup to personalize your writing.       │   │
+│  │              Takes about 1 minute.                  │   │
+│  │                                                     │   │
+│  │              Press Enter to begin                   │   │
+│  │                                                     │   │
+│  ╰─────────────────────────────────────────────────────╯   │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+```
 
 ## Installation
 
@@ -27,43 +153,6 @@ Or run directly without installing:
 ```bash
 npx @anthropic/leo
 ```
-
-## Quick Start
-
-### 1. Run the Setup Wizard
-
-```bash
-leo
-```
-
-Leo guides you through interactive setup on first run:
-- Blog name, niche, and URL
-- Target audience description
-- Writing style preferences
-- CMS choice (Sanity or local markdown)
-
-### 2. Add Your API Key
-
-The setup wizard will prompt for your Claude API key. You can also configure it later:
-
-```bash
-leo settings
-```
-
-Get your key from [console.anthropic.com](https://console.anthropic.com/settings/keys)
-
-### 3. Write Your First Article
-
-```bash
-leo write "how to start a blog in 2025"
-```
-
-Leo will:
-1. Research the keyword and competitors
-2. Analyze top-ranking content
-3. Write an SEO-optimized article
-4. Generate image specifications
-5. Save to your configured CMS
 
 ## Examples
 
@@ -87,19 +176,64 @@ leo queue status
 leo write next
 ```
 
-### Interactive Mode Commands
-
-Inside Leo's interactive mode, use slash commands:
+### Interactive Mode
 
 ```
-/write-blog seo tips for startups   # Research and write article
-/queue-status                        # View pending keywords
-/publish my-article-slug             # Publish to CMS
-/settings                            # Configure API keys
-/cost                                # Show session costs
+┌─────────────────────────────────────────────────────────────┐
+│                                                             │
+│  $ leo                                                      │
+│                                                             │
+│  🦁 Leo v0.1.0                                              │
+│  ──────────────────────────────────────────────────────     │
+│                                                             │
+│  > /write-blog seo tips for startups                        │
+│                                                             │
+│  ┌─ Phase 1: Research ─────────────────────────────────┐    │
+│  │ ✓ Fetched SERP data for "seo tips for startups"     │    │
+│  │ ✓ Found 10 competitor URLs                          │    │
+│  │ ✓ Scraped top 5 ranking pages                       │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+│  ┌─ Phase 2: Analysis ─────────────────────────────────┐    │
+│  │ ◐ Analyzing content patterns...                     │    │
+│  └─────────────────────────────────────────────────────┘    │
+│                                                             │
+└─────────────────────────────────────────────────────────────┘
 ```
 
-### Configuration Example
+## Commands
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  COMMAND                         │  DESCRIPTION                            │
+├──────────────────────────────────┼─────────────────────────────────────────┤
+│  leo                             │  Start interactive mode                 │
+│  leo write [keyword]             │  Write article for keyword              │
+│  leo write next                  │  Write next queued keyword              │
+│  leo queue status                │  Show queue statistics                  │
+│  leo queue add "keyword"         │  Add keyword to queue                   │
+│  leo settings                    │  Configure API keys                     │
+│  leo reset                       │  Reset config for fresh start           │
+│  leo update                      │  Update to latest version               │
+└──────────────────────────────────┴─────────────────────────────────────────┘
+```
+
+### Interactive Commands
+
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  COMMAND                         │  DESCRIPTION                            │
+├──────────────────────────────────┼─────────────────────────────────────────┤
+│  /write-blog [keyword]           │  Full research and writing workflow     │
+│  /queue-status                   │  View pending keywords                  │
+│  /publish [slug]                 │  Publish draft to CMS                   │
+│  /settings                       │  Open API key configuration             │
+│  /cost                           │  Show session cost breakdown            │
+│  /clear                          │  Clear conversation                     │
+└──────────────────────────────────┴─────────────────────────────────────────┘
+```
+
+## Configuration
 
 Leo stores settings in `leo.config.json`:
 
@@ -121,45 +255,20 @@ Leo stores settings in `leo.config.json`:
 }
 ```
 
-## Commands
-
-| Command | Description |
-|---------|-------------|
-| `leo` | Start interactive mode |
-| `leo write [keyword]` | Write article for keyword |
-| `leo write next` | Write next queued keyword |
-| `leo queue status` | Show queue statistics |
-| `leo queue add "kw"` | Add keyword to queue |
-| `leo settings` | Configure API keys |
-| `leo reset` | Reset config for fresh start |
-| `leo update` | Update to latest version |
-
-## How It Works
-
-Leo orchestrates specialized agents in a multi-phase workflow:
-
-```
-Leo (Orchestrator)
- ├─ DataForSEO     → SERP data and competitor URLs
- ├─ Web Researcher → Current information via Perplexity
- ├─ Competitor Scraper → Top-ranking content via Firecrawl
- ├─ Content Analyzer → Patterns, gaps, and opportunities
- ├─ Content Writer → SEO-optimized article (Claude Opus)
- └─ Image Creator → Image specs and generation
-```
-
-Each phase builds on the previous, creating comprehensive, well-researched content.
-
 ## API Keys
 
-| Key | Purpose | Required |
-|-----|---------|----------|
-| `ANTHROPIC_API_KEY` | Claude access | Yes |
-| `DATAFORSEO_LOGIN/PASSWORD` | SERP data | No |
-| `PERPLEXITY_API_KEY` | Web research | No |
-| `FIRECRAWL_API_KEY` | Page scraping | No |
-| `OPENROUTER_API_KEY` | Image generation | No |
-| `SANITY_API_KEY` | CMS publishing | No |
+```
+┌─────────────────────────────────────────────────────────────────────────────┐
+│  KEY                             │  PURPOSE              │  REQUIRED        │
+├──────────────────────────────────┼───────────────────────┼──────────────────┤
+│  ANTHROPIC_API_KEY               │  Claude access        │  ✓ Yes           │
+│  DATAFORSEO_LOGIN/PASSWORD       │  SERP data            │  ○ Optional      │
+│  PERPLEXITY_API_KEY              │  Web research         │  ○ Optional      │
+│  FIRECRAWL_API_KEY               │  Page scraping        │  ○ Optional      │
+│  OPENROUTER_API_KEY              │  Image generation     │  ○ Optional      │
+│  SANITY_API_KEY                  │  CMS publishing       │  ○ Optional      │
+└──────────────────────────────────┴───────────────────────┴──────────────────┘
+```
 
 Create a `.env` file:
 
@@ -174,14 +283,18 @@ PERPLEXITY_API_KEY=pplx-...
 
 ### Local Markdown (Default)
 
-Articles save to your project:
-- `./drafts/{slug}.md` - Article content
-- `./images/{slug}/` - Generated images
-- `./drafts/{slug}-images.json` - Image metadata
+```
+./your-project/
+├── drafts/
+│   ├── my-article.md           # Article content
+│   └── my-article-images.json  # Image metadata
+└── images/
+    └── my-article/
+        ├── hero.png
+        └── section-1.png
+```
 
 ### Sanity CMS
-
-Configure in `leo.config.json`:
 
 ```json
 {
@@ -193,6 +306,32 @@ Configure in `leo.config.json`:
     }
   }
 }
+```
+
+## Architecture
+
+```
+                              ┌─────────────────────────────┐
+                              │                             │
+                              │      🦁 LEO ORCHESTRATOR    │
+                              │                             │
+                              │   Coordinates all agents    │
+                              │   and manages workflow      │
+                              │                             │
+                              └──────────────┬──────────────┘
+                                             │
+                 ┌───────────────────────────┼───────────────────────────┐
+                 │                           │                           │
+                 ▼                           ▼                           ▼
+    ┌────────────────────┐      ┌────────────────────┐      ┌────────────────────┐
+    │                    │      │                    │      │                    │
+    │  🔍 RESEARCH PHASE │      │  ✍️ WRITING PHASE  │      │  📤 PUBLISH PHASE  │
+    │                    │      │                    │      │                    │
+    │  • SERP Analysis   │      │  • Content Writer  │      │  • CMS Adapter     │
+    │  • Web Research    │      │  • Image Creator   │      │  • Local Storage   │
+    │  • Page Scraping   │      │  • SEO Optimizer   │      │  • Asset Upload    │
+    │                    │      │                    │      │                    │
+    └────────────────────┘      └────────────────────┘      └────────────────────┘
 ```
 
 ## Development
@@ -214,4 +353,10 @@ MIT
 
 ---
 
-Built with [Claude](https://claude.ai) and [Ink](https://github.com/vadimdemedes/ink)
+<p align="center">
+  <sub>Built with <a href="https://claude.ai">Claude</a> and <a href="https://github.com/vadimdemedes/ink">Ink</a></sub>
+</p>
+
+<p align="center">
+  <sub>Made with 🧡 by the Leo team</sub>
+</p>
