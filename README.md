@@ -10,6 +10,7 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/BlockchainHB/leo/releases/latest"><img src="https://img.shields.io/github/v/release/BlockchainHB/leo?style=flat-square&color=f97316&label=release" alt="Latest release"></a>
   <img src="https://img.shields.io/badge/node-22.12%2B-111111?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node 22.12 or later">
   <a href="https://github.com/BlockchainHB/leo/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/BlockchainHB/leo/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
