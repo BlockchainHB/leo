@@ -1,44 +1,9 @@
-# Dependencies
 node_modules/
-
-# Build output
 dist/
-
-# Environment
+coverage/
 .env
-.env.local
-.env.*.local
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# OS
+.env.*
+!.env.example
+.leo/
 .DS_Store
-Thumbs.db
-
-# Logs
 *.log
-npm-debug.log*
-
-# Draft outputs (keep structure, ignore generated content)
-drafts/*.json
-drafts/*.md
-!drafts/.gitkeep
-
-# Generated images
-images/**/*.png
-!images/.gitkeep
-
-# Research outputs
-research/*.md
-blog-research/*.md
-leo-session.json
-
-# Session state (transient)
-.claude/session-state.json
-blog-progress.json
-keywords.json
-leo.config.json

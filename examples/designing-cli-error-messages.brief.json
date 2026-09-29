@@ -1,0 +1,140 @@
+{
+  "title": "Designing CLI Error Messages: A Practical Guide",
+  "searchIntent": "informational",
+  "angle": "Most guides say \"be human-friendly\"; this one gives senior engineers building internal tools a concrete what→why→fix template, stdout/stderr/exit-code/color rules that survive scripts and CI, and internal-tool remediation such as runbook links and exact auth commands.",
+  "targetWords": 1100,
+  "description": "Design CLI error messages people can act on: what→why→fix structure, stderr vs stdout, exit codes, NO_COLOR, and remediation for internal tools.",
+  "excerpt": "A good CLI error tells you what happened, why, and what to do next, and it still works in pipes and CI. Here is a practical pattern for senior engineers building internal tools.",
+  "category": "CLI Design",
+  "outline": [
+    {
+      "heading": "What makes a CLI error message good?",
+      "points": [
+        "Open with the claim: an error is the moment your tool is read most carefully, so treat it as UI.",
+        "Define the standard: what happened, why, how to fix it, plus optional error code and docs URL.",
+        "Show a bad vs good before/after example."
+      ],
+      "facts": [
+        {
+          "fact": "The main trend across sources is structured errors that hold up in scripts and CI: what happened, why, how to fix it, plus an optional error code and docs URL.",
+          "url": "https://clig.dev"
+        },
+        {
+          "fact": "clig.dev example: \"Can't write to file.txt. You might need to make it writable by running 'chmod +w file.txt'.\"",
+          "url": "https://clig.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Catch expected errors and rewrite them for humans",
+      "points": [
+        "Never show raw stack traces for expected failures such as bad input, missing files or permissions.",
+        "Include specifics: file paths, values, constraints.",
+        "Show a catch-at-the-top pattern that maps known exceptions to messages."
+      ],
+      "facts": [
+        {
+          "fact": "clig.dev says to rewrite expected errors for humans.",
+          "url": "https://clig.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Keep signal high: grouping, ordering and restraint",
+      "points": [
+        "Group repeated errors under one explanatory header instead of near-identical lines.",
+        "Put the most important information at the end, where the eye lands.",
+        "Skip ERR/WARN labels in human output; reserve them for verbose mode.",
+        "Use red sparingly."
+      ],
+      "facts": [
+        {
+          "fact": "clig.dev says signal-to-noise ratio is crucial.",
+          "url": "https://clig.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Send errors to stderr and get exit codes right",
+      "points": [
+        "Errors, warnings and logs go to stderr; stdout stays for data so pipes are not polluted.",
+        "Exit 0 on success and non-zero on failure.",
+        "Address the disagreement openly: 0/1 by default vs a few mapped codes. Recommend a small documented set only when scripts need to branch (retry, skip, alert).",
+        "Document codes in --help or the man page."
+      ],
+      "facts": [
+        {
+          "fact": "clig.dev: exit 0 on success, non-zero on failure, with distinct codes mapped to important failure modes; send errors to stderr.",
+          "url": "https://clig.dev"
+        },
+        {
+          "fact": "Better CLI and other sources say to use 0/1 unless there is a strong reason for more, and to document any codes.",
+          "url": "https://bettercli.org/design/exit-codes/"
+        }
+      ]
+    },
+    {
+      "heading": "Color and formatting that don't break logs and CI",
+      "points": [
+        "Disable color when the stream is not a TTY, NO_COLOR is set, TERM=dumb, or --no-color is passed.",
+        "Explain NO_COLOR scope: color only, not bold/underline; user config or flags may override.",
+        "Warn against over-coloring."
+      ],
+      "facts": [
+        {
+          "fact": "NO_COLOR: if the env var is present and non-empty, don't emit ANSI color, whatever its value. It covers color only, and is supported by hundreds of libraries and tools.",
+          "url": "https://no-color.org"
+        },
+        {
+          "fact": "clig.dev color rules: disable when not a TTY, NO_COLOR set, TERM=dumb, or --no-color passed.",
+          "url": "https://clig.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Handle unexpected errors: debug output and bug reports",
+      "points": [
+        "Keep debug output behind -v, -d or --debug rather than dumping it by default.",
+        "For crashes, write a detailed log to a file instead of flooding the terminal.",
+        "Give a bug-report path, ideally a pre-populated issue URL with system info."
+      ],
+      "facts": [
+        {
+          "fact": "For unexpected errors, print debug context and traceback or write a log file, and give bug-report instructions, ideally a pre-populated issue URL with system info.",
+          "url": "https://clig.dev"
+        }
+      ]
+    },
+    {
+      "heading": "Error messages for internal tools: point at your own runbook",
+      "points": [
+        "Add team-specific remediation: runbook link, owning channel, the exact login or auth command.",
+        "Use stable error codes plus docs URLs so support can search for them.",
+        "Flag this as a recommendation from experience, not a standard."
+      ],
+      "facts": []
+    },
+    {
+      "heading": "Checklist: ship-ready CLI error messages",
+      "points": [
+        "Short scannable checklist covering what/why/fix, stderr, exit code, color rules, grouping, debug flag, bug-report path."
+      ],
+      "facts": []
+    }
+  ],
+  "gaps": [
+    "Concrete before/after rewrites, where competitors give only principles",
+    "stdout vs stderr, exit code and NO_COLOR/TTY rules in one place, and the exit-code granularity disagreement",
+    "Internal-tool remediation (runbooks, owning channel, exact auth command)",
+    "Unexpected-error handling: log file plus pre-populated bug-report URL"
+  ],
+  "faqs": [
+    "What should a good CLI error message include?",
+    "Should CLI errors go to stdout or stderr?",
+    "How many exit codes should my CLI use?",
+    "How do I handle NO_COLOR and non-TTY output in error messages?",
+    "Should I show stack traces in CLI errors?",
+    "How do I add error codes or docs links to CLI errors?"
+  ],
+  "internalLinks": []
+}
