@@ -1,5 +1,6 @@
 import { createSdkMcpServer, tool } from '@anthropic-ai/claude-agent-sdk';
 import { z } from 'zod';
+import pkg from '../../package.json' with { type: 'json' };
 import type { Emit } from '../core/events';
 import type { Project } from '../core/project';
 import { Queue } from '../core/queue';
@@ -18,7 +19,7 @@ const fail = (error: unknown) => ({ ...text(`Error: ${(error as Error).message}`
 export function createLeoTools(project: Project, hooks: { emit: Emit; signal: () => AbortSignal }) {
   return createSdkMcpServer({
     name: 'leo',
-    version: '2.0.0',
+    version: pkg.version,
     alwaysLoad: true,
     timeout: 30 * 60_000,
     tools: [
