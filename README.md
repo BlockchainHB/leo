@@ -10,7 +10,6 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/leo-agent"><img src="https://img.shields.io/npm/v/leo-agent?style=flat-square&color=f97316&label=npm" alt="npm version"></a>
   <img src="https://img.shields.io/badge/node-22.12%2B-111111?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node 22.12 or later">
   <a href="https://github.com/BlockchainHB/leo/actions/workflows/ci.yml"><img src="https://img.shields.io/github/actions/workflow/status/BlockchainHB/leo/ci.yml?branch=main&style=flat-square&label=CI" alt="CI status"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-111111?style=flat-square" alt="MIT license"></a>
@@ -33,10 +32,10 @@
 </p>
 
 <p align="center">
-  <a href="https://www.npmjs.com/package/leo-agent">
+  <a href="https://leoagent.dev">
     <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/npm-dark.svg">
-      <img src="docs/assets/npm-light.svg" width="248" height="60" alt="Install from npm">
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/site-dark.svg">
+      <img src="docs/assets/site-light.svg" width="248" height="60" alt="Visit leoagent.dev">
     </picture>
   </a>
 </p>
@@ -75,10 +74,13 @@ Leo picks the best provider you've configured for each stage and falls back auto
 
 ## Install
 
-1. Install the CLI:
+1. Clone the repo, install, and link the `leo` command. Installing also builds it:
 
    ```bash
-   npm install -g leo-agent
+   git clone https://github.com/BlockchainHB/leo.git
+   cd leo
+   npm install
+   npm link
    ```
 
 2. In your blog's folder, describe the blog and add whichever API keys you have:
@@ -205,16 +207,15 @@ A chatbot writes from memory. Leo reads the current results, researches with sou
 Claude Opus for the draft, Sonnet for the brief and research, and Haiku for quick structured tasks. Change any of them under <code>models</code> in <code>leo.config.json</code>.
 </details>
 
-## Build from source
+## Development
+
+From your clone, run commands from source without rebuilding:
 
 ```bash
-git clone https://github.com/BlockchainHB/leo.git
-cd leo
-npm install
-npm run dev -- write "test keyword"   # run from source
+npm run dev -- write "test keyword"
 ```
 
-Run the 24 tests with `npm test`, and build with `npm run build`. Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how it's built and [CONTRIBUTING.md](CONTRIBUTING.md) to get involved.
+Run the 24 tests with `npm test`, and rebuild the linked `leo` with `npm run build`. Read [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for how it's built and [CONTRIBUTING.md](CONTRIBUTING.md) to get involved.
 
 ## License
 
