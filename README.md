@@ -173,9 +173,6 @@ src/
 Stack: Node ≥ 22.12, TypeScript 7, `@anthropic-ai/claude-agent-sdk` 0.3, Zod 4, Ink 7 + React 19,
 Commander 15, @clack/prompts, `@sanity/client` 8, marked, tsdown, Vitest 5, Biome 2.
 
-Leo v2 is a ground-up rewrite. [`docs/AUDIT.md`](docs/AUDIT.md) covers what was wrong with v1 and
-why each decision changed.
-
 ## License
 
 MIT © Hasaam
