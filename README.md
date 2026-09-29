@@ -17,6 +17,7 @@
 </p>
 
 <p align="center">
+  <a href="https://leoagent.dev"><b>leoagent.dev</b></a> ·
   <a href="#install">Install</a> ·
   <a href="#how-a-run-works">How it works</a> ·
   <a href="#faq">FAQ</a> ·
@@ -29,6 +30,15 @@
     <source media="(prefers-color-scheme: light)" srcset="docs/assets/hero-light.svg">
     <img src="docs/assets/hero-light.svg" width="660" alt="Leo in a terminal writing an article about CLI error messages. Search results, research, competitor pages, brief and draft are each checked off. The run took 1 minute 49 seconds and cost 29 cents.">
   </picture>
+</p>
+
+<p align="center">
+  <a href="https://www.npmjs.com/package/leo-agent">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="docs/assets/npm-dark.svg">
+      <img src="docs/assets/npm-light.svg" width="248" height="60" alt="Install from npm">
+    </picture>
+  </a>
 </p>
 
 ## Why
