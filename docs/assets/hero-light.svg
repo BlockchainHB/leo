@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="660" height="422" viewBox="0 0 660 422" role="img" aria-label="Leo writing an article in the terminal: every stage checked off in 1 minute 49 seconds for 29 cents">
+  <rect x="0.5" y="0.5" width="659" height="421" rx="12" fill="#ffffff" stroke="#e4e4e7"/>
+  <path d="M12.5 0.5h635a12 12 0 0 1 12 12v31.5h-659v-31.5a12 12 0 0 1 12-12z" fill="#f4f4f5"/>
+  <line x1="0.5" y1="44" x2="659.5" y2="44" stroke="#e4e4e7"/>
+  <circle cx="24" cy="22" r="6" fill="#ff5f57"/><circle cx="44" cy="22" r="6" fill="#febc2e"/><circle cx="64" cy="22" r="6" fill="#28c840"/>
+  <text x="330" y="27" text-anchor="middle" fill="#71717a" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12">~/shipyard</text>
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, 'Liberation Mono', monospace" font-size="13.5">
+    <text x="28" y="70" xml:space="preserve"><tspan fill="#a1a1aa">$ </tspan><tspan fill="#27272a">leo write designing cli error messages</tspan></text>
+    
+    <text x="28" y="114" xml:space="preserve"><tspan fill="#ea580c">◆ </tspan><tspan fill="#09090b" font-weight="600">leo</tspan><tspan fill="#71717a"> writing </tspan><tspan fill="#27272a">“designing cli error messages”</tspan><tspan fill="#71717a">           $0.29 · 1m 49s</tspan></text>
+    
+    <text x="28" y="158" xml:space="preserve"><tspan fill="#16a34a">✓ </tspan><tspan fill="#27272a">Search results     </tspan><tspan fill="#71717a">9 results via Claude web search             </tspan><tspan fill="#71717a"> 29s</tspan></text>
+    <text x="28" y="180" xml:space="preserve"><tspan fill="#16a34a">✓ </tspan><tspan fill="#27272a">Research           </tspan><tspan fill="#71717a">3 notes, 6 sources via Claude web search    </tspan><tspan fill="#71717a"> 25s</tspan></text>
+    <text x="28" y="202" xml:space="preserve"><tspan fill="#16a34a">✓ </tspan><tspan fill="#27272a">Competitor pages   </tspan><tspan fill="#71717a">3 read, avg 970 words, 1 unreadable         </tspan><tspan fill="#71717a">  1s</tspan></text>
+    <text x="28" y="224" xml:space="preserve"><tspan fill="#16a34a">✓ </tspan><tspan fill="#27272a">Content brief      </tspan><tspan fill="#71717a">8 sections, ~1,100 words, 4 gaps            </tspan><tspan fill="#71717a"> 19s</tspan></text>
+    <text x="28" y="246" xml:space="preserve"><tspan fill="#16a34a">✓ </tspan><tspan fill="#27272a">Draft              </tspan><tspan fill="#71717a">1,323 words                                 </tspan><tspan fill="#71717a"> 36s</tspan></text>
+    <text x="28" y="268" xml:space="preserve"><tspan fill="#a1a1aa">– </tspan><tspan fill="#a1a1aa">Images             </tspan><tspan fill="#a1a1aa">disabled</tspan></text>
+    
+    <text x="28" y="312" xml:space="preserve"><tspan fill="#09090b" font-weight="600">Designing CLI Error Messages: A Practical Guide</tspan></text>
+    <text x="28" y="334" xml:space="preserve"><tspan fill="#71717a">1,323 words · $0.29 · .leo/runs/designing-cli-error-messages/article.md</tspan></text>
+    
+    <text x="28" y="378" xml:space="preserve"><tspan fill="#71717a">next </tspan><tspan fill="#ea580c">leo publish designing-cli-error-messages</tspan></text>
+  </g>
+</svg>
